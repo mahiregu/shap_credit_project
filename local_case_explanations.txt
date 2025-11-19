@@ -1,0 +1,86 @@
+LOCAL SHAP EXPLANATIONS FOR THREE INDIVIDUAL APPLICANTS
+========================================================
+
+This document provides a text-based explanation of why the model assigned specific risk scores to three selected applicants. 
+The explanations are based on SHAP values, which show how each feature contributed to increasing or decreasing the predicted risk.
+
+------------------------------------------------------------
+1. APPLICANT 1 – HIGH-RISK PREDICTION
+------------------------------------------------------------
+
+The model predicted a high probability of default for this applicant. The following features pushed the prediction upward:
+
+- checking_status_no_checking:
+
+  This was the strongest positive contributor. Having no checking account is treated by the model as a sign of financial instability, increasing risk.
+
+- credit_amount:
+
+  The applicant requested a high loan amount. Larger credit amounts add financial burden and increase the likelihood of repayment failure.
+
+- duration:
+
+  The loan duration was long. Longer repayment periods create more uncertainty and push the risk score higher.
+
+- credit_history_critical/other:
+
+  The applicant has a negative or uncertain credit history, which contributes to a higher predicted default risk.
+
+Overall, multiple strong risk factors pushed the SHAP value upward, resulting in a high-risk classification for this applicant.
+
+
+------------------------------------------------------------
+2. APPLICANT 2 – MEDIUM-RISK PREDICTION
+------------------------------------------------------------
+
+This applicant was predicted to have a moderate risk of default. The SHAP values indicate that both positive and negative factors influenced the prediction.
+
+Positive (risk-increasing) contributors:
+- duration:
+  Slightly long loan duration added some risk.
+
+- credit_amount:
+  A medium-sized loan amount increased risk mildly.
+
+- savings_status_<100:
+  Low savings contributed to financial vulnerability.
+
+Negative (risk-lowering) contributors:
+- employment_status_1-4 years:
+  Stable employment slightly reduced the risk.
+
+Interpretation:
+Because the applicant has a mix of risky and stable indicators, the SHAP values neither push the score strongly high nor strongly low. 
+As a result, the final risk prediction falls in the medium range.
+
+
+------------------------------------------------------------
+3. APPLICANT 3 – LOW-RISK PREDICTION
+------------------------------------------------------------
+
+The model predicted a low likelihood of default for this applicant. Several 
+features contributed to lowering the risk score:
+
+- checking_status_>200:
+  A strong checking account balance was the most influential negative 
+  contributor. It indicates good financial stability.
+
+- duration:
+  The applicant requested a short loan duration, reducing uncertainty in 
+  repayment.
+
+- credit_amount:
+  A small loan amount lowered repayment burden, reducing risk.
+
+- credit_history_good:
+  Positive credit history contributed significantly to lowering the prediction.
+
+Interpretation:
+Strong financial indicators combined to create a large negative SHAP value. 
+This pushed the prediction into the low-risk category with high confidence.
+
+
+Conclusion:
+-----------
+These three cases demonstrate how the SHAP method explains individual predictions by breaking down the contribution of each feature. 
+The model's decisions are consistent with real-world financial reasoning, and the SHAP values provide transparency for each applicant’s assigned risk level.
