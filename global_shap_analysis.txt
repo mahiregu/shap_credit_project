@@ -1,0 +1,59 @@
+GLOBAL SHAP ANALYSIS
+====================
+
+Objective:
+To interpret the global SHAP values of the credit-risk prediction model and identify the top three most influential drivers contributing to the model’s default risk predictions.
+
+1. Overview of SHAP Results
+---------------------------
+Global SHAP values summarize how much each feature contributes to the model’s predictions across all applicants. Higher mean SHAP values indicate stronger influence on the final risk output.
+
+Based on the SHAP bar plot, the top three drivers of credit risk are:
+
+1. checking_status_no_checking
+2. duration
+3. credit_amount
+
+These three features have the highest global SHAP importance scores, meaning they influence the model’s decision-making more than any other variables.
+
+2. Interpretation of Top Three Risk Drivers
+-------------------------------------------
+1. checking_status_no_checking – Most influential risk driver
+
+- Applicants with no checking account show the highest SHAP contribution toward being predicted as risky.
+
+- The model interprets a lack of a checking account as a signal of limited financial stability or transparency.
+
+- This feature consistently pushes predictions toward higher default probability.
+
+2. duration – Loan duration (second strongest driver)
+
+- Longer loan repayment durations typically increase financial burden.
+
+- The SHAP values show that longer-term loans contribute positively to default risk, while shorter durations reduce the risk.
+
+- This aligns with real-world banking logic, since long repayment periods mean prolonged uncertainty.
+
+3. credit_amount – Total loan amount requested
+
+- Higher loan amounts increase the risk score in the SHAP plot.
+
+- Applicants requesting larger credit amounts tend to have higher repayment risk, especially when not backed by strong financial indicators.
+
+- The model captures this by assigning positive SHAP values to high credit_amount.
+
+3. Key Insights
+---------------
+- Checking account status is the strongest indicator of risk in this dataset.
+
+- Loan duration and credit amount are major financial factors contributing to repayment difficulty.
+
+- The model heavily relies on financial behavior indicators rather than purely demographic variables.
+
+- These SHAP results align with typical credit-risk logic, meaning the model behaves in a realistic and interpretable manner.
+
+Conclusion:
+-----------
+The global SHAP analysis shows that checking account availability, loan duration, and credit amount are the primary drivers of the model’s risk predictions. 
+These findings confirm that the model is focusing on financially meaningful variables, ensuring reliability and interpretability in real-world credit assessment.
+
