@@ -4,6 +4,7 @@ This project builds a credit risk prediction model using **XGBoost** and explain
 It demonstrates both global and local interpretability for loan applicant risk analysis.
 ---
 ## 📂 Project Structure
+```
 shap_credit_project/
 │
 ├── shap_credit_project.ipynb
@@ -11,6 +12,7 @@ shap_credit_project/
 ├── global_shap_analysis.txt
 ├── local_case_explanations.txt
 └── submission_markdown.md
+```
 
 ---
 
