@@ -1,0 +1,43 @@
+MODEL PERFORMANCE REPORT
+========================
+
+Model Used: XGBoost Classifier
+Dataset: Synthetic Credit Default Dataset
+Train/Test Split: 80/20
+
+
+1. Classification Metrics
+-------------------------
+Accuracy: 0.77
+Precision: 0.6667
+Recall: 0.4333
+F1 Score: 0.5253
+AUC-ROC: 0.7877
+
+
+2. Classification Report
+------------------------
+               precision    recall  f1-score   support
+
+Class 0           0.79       0.91      0.84       140
+Class 1           0.67       0.43      0.53        60
+
+Overall Accuracy: 0.77
+Macro Avg:        0.73       0.67      0.68       200
+Weighted Avg:     0.75       0.77      0.75       200
+
+
+3. Interpretation
+-----------------
+- The model achieves a 77% accuracy, which is reasonable for credit risk prediction on synthetic data.
+
+- Class 0 (non-default) shows very strong recall (0.91), meaning the model correctly identifies most safe borrowers.
+
+- Class 1 (default) is harder to detect, with a recall of 0.43. This is typical in imbalanced credit datasets where defaults are fewer.
+
+- The AUC score of 0.7877 indicates the model has good overall ability to distinguish between risky and non-risky applicants.
+
+- Precision for Class 1 is 0.67, which means when the model predicts high risk, it is correct most of the time.
+
+- The model performs adequately but may benefit from techniques like class balancing or threshold tuning to further improve default detection.
+
