@@ -7,11 +7,12 @@ It demonstrates both global and local interpretability for loan applicant risk a
 ```
 shap_credit_project/
 │
-├── shap_credit_project.ipynb
-├── model_performance.txt
 ├── global_shap_analysis.txt
-├── local_case_explanations.txt
+├──local_case_explanations.txt
+├── model_performance.txt
+├── shap_credit_project.ipynb
 └── submission_markdown.md
+
 ```
 
 ---
